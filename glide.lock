@@ -1,5 +1,5 @@
 hash: 39416de69fad6efe642b904f6604286b46bb0433a626001b1be29b3bcf5b3307
-updated: 2017-09-17T23:25:13.540340088+07:00
+updated: 2017-09-23T16:39:12.651931719+07:00
 imports:
 - name: github.com/dgrijalva/jwt-go
   version: a539ee1a749a2b895533f979515ac7e6e0f5b650
@@ -28,7 +28,7 @@ imports:
   - acme
   - acme/autocert
 - name: golang.org/x/sys
-  version: 062cd7e4e68206d8bab9b18396626e855c992658
+  version: 429f518978ab01db8bb6f44b66785088e7fba58b
   subpackages:
   - unix
 testImports: []
