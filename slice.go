@@ -1,21 +1,21 @@
 package main
 
-import (
-	"fmt"
-)
+import "golang.org/x/tour/pic"
 
+func Pic(dx, dy int) [][]uint8 {
+	// Allocate two-dimensioanl array.
+	a := make([][]uint8, dy)
+	for i := 0; i < dy; i++ {
+		a[i] = make([]uint8, dx)
+	}
+
+	for i := 0; i < dy; i++ {
+		for j := 0; j < dx; j++ {
+			a[i][j] = uint8(i * j)
+		}
+	}
+	return a
+}
 func main() {
-	s := []int{2, 3, 4, 2, 1, 2}
-	fmt.Println("Lenght:", len(s), "Capability:", cap(s))
-
-	s = append(s, 4)
-	fmt.Println("Lenght:", len(s), "Capability:", cap(s))
-
-	s = append(s, 4)
-	s = append(s, 5)
-	s = append(s, 5)
-	s = append(s, 5)
-	s = append(s, 5)
-	s = append(s, 5)
-	fmt.Println("Lenght:", len(s), "Capability:", cap(s))
+	pic.Show(Pic)
 }
