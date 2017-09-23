@@ -11,7 +11,7 @@ func enc(xx, rot byte) byte {
 	return (xx+rot)%26 + 97
 }
 
-func caesar(s string, rot byte) string {
+func Caesar(s string, rot byte) string {
 	result := []string{}
 	for _, v := range s {
 		result = append(result, string(enc(byte(v), rot)))
