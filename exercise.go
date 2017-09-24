@@ -1,6 +1,6 @@
 package golang
 
 type langStruct struct {
-	id   int
-	lang string
+	ID   int    `xml:"id" json:"id"`
+	Lang string `xml:"lang" json:"lang"`
 }
