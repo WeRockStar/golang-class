@@ -11,6 +11,8 @@ func TestJsonAndXMLStructure(t *testing.T) {
 	xmlStr := `<xml>
 		<id>1</id>
 		<lang>Go</lang>
+		<book>
+		</book>
 		</xml>
 	`
 
