@@ -1,9 +1,12 @@
 package golang
 
-import "testing"
+import (
+	"encoding/json"
+	"testing"
+)
 
 func TestJsonStructure(t *testing.T) {
-	json := `{
+	jsonStr := `{
 	"id": 1,
 	"lang": "go"		
 }`
@@ -11,7 +14,7 @@ func TestJsonStructure(t *testing.T) {
 	type testStruct = langStruct
 	var myStruct testStruct
 
-	err := json.Unmarshal([]byte(json), &myStruct)
+	err := json.Unmarshal([]byte(jsonStr), &myStruct)
 
 	if err != nil {
 		t.Error("it should not error when you make the righ struct that represent json string")
@@ -19,7 +22,7 @@ func TestJsonStructure(t *testing.T) {
 }
 
 func TestJsonStructures(t *testing.T) {
-	json := `[
+	jsonStr := `[
 	{
 		"id": 1,
 		"lang": "go"
@@ -37,7 +40,7 @@ func TestJsonStructures(t *testing.T) {
 	type testStruct = langStruct
 	var myStruct []testStruct
 
-	err := json.Unmarshal([]byte(json), &myStruct)
+	err := json.Unmarshal([]byte(jsonStr), &myStruct)
 
 	if err != nil {
 		t.Error("it should not error when you make the righ struct that represent json string")
